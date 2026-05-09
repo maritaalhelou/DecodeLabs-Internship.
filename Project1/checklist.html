@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flight operations checklist using CSS Grid and Flexbox.">
+  <title>Flight Checklist</title>
+  <link rel="stylesheet" href="checklist.css">
+</head>
+<body>
+  <div class="app-grid">
+    <header class="panel header-panel">
+      <div class="brand">
+        <h1>Flight Checklist</h1>
+        <p>Pilot workflow for safe departure and arrival</p>
+      </div>
+      <picture class="hero">
+        <source srcset="image.png" type="image/avif">
+        <img src="image.png" alt="Stylized aircraft cockpit panel" width="640" height="320">
+      </picture>
+    </header>
+
+    <main class="panel checklist-panel" aria-labelledby="checklist-title">
+      <h2 id="checklist-title">Procedural Checklist</h2>
+
+      <section class="checklist-stage" aria-labelledby="preflight-title">
+        <h3 id="preflight-title">Preflight</h3>
+        <ul>
+          <li class="task"><input id="pre1" type="checkbox"><label for="pre1">Documents and weather briefing reviewed</label></li>
+          <li class="task"><input id="pre2" type="checkbox"><label for="pre2">Fuel quantity and quality confirmed</label></li>
+          <li class="task"><input id="pre3" type="checkbox"><label for="pre3">Control surfaces inspected and free</label></li>
+        </ul>
+      </section>
+
+      <section class="checklist-stage" aria-labelledby="taxi-title">
+        <h3 id="taxi-title">Taxi</h3>
+        <ul>
+          <li class="task"><input id="taxi1" type="checkbox"><label for="taxi1">Brakes check completed on movement</label></li>
+          <li class="task"><input id="taxi2" type="checkbox"><label for="taxi2">Flight instruments aligned with taxi heading</label></li>
+          <li class="task"><input id="taxi3" type="checkbox"><label for="taxi3">Before-takeoff brief complete</label></li>
+        </ul>
+      </section>
+
+      <section class="checklist-stage" aria-labelledby="flight-title">
+        <h3 id="flight-title">Takeoff and Cruise</h3>
+        <ul>
+          <li class="task"><input id="flt1" type="checkbox"><label for="flt1">Power set and engine gauges green</label></li>
+          <li class="task"><input id="flt2" type="checkbox"><label for="flt2">Positive climb, gear/flaps as required</label></li>
+          <li class="task"><input id="flt3" type="checkbox"><label for="flt3">Cruise altitude, mixture, and navigation set</label></li>
+        </ul>
+      </section>
+
+      <section class="checklist-stage" aria-labelledby="landing-title">
+        <h3 id="landing-title">Landing and Shutdown</h3>
+        <ul>
+          <li class="task"><input id="land1" type="checkbox"><label for="land1">Approach stabilized, checklist complete</label></li>
+          <li class="task"><input id="land2" type="checkbox"><label for="land2">Runway clear and post-landing checks done</label></li>
+          <li class="task"><input id="land3" type="checkbox"><label for="land3">Engine shutdown sequence complete</label></li>
+        </ul>
+      </section>
+    </main>
+
+    <aside class="panel notes-panel" aria-labelledby="notes-title">
+      <h2 id="notes-title">Mission Notes</h2>
+      <div class="note">
+        <h3>Aircraft</h3>
+        <p>Cessna 172SP</p>
+      </div>
+      <div class="note">
+        <h3>Departure</h3>
+        <p>RWY 22 - crosswind 8kt</p>
+      </div>
+      <div class="note">
+        <h3>Alternates</h3>
+        <p>Airport B / Airport C</p>
+      </div>
+    </aside>
+
+    <footer class="panel footer-panel">
+        <p>thanks for visiting our website</p>
+    </footer>
+  </div>
+</body>
+</html>
