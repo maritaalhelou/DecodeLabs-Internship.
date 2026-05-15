@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive layout demo: Grid, Flexbox, mobile-first CSS.">
+  <title>Project 2 — Responsive Layout Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="page">
+    <header class="site-header panel">
+      <div class="header-inner">
+        <a class="logo" href="#">Layout Lab</a>
+
+        <nav class="nav-desktop" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          popovertarget="site-menu"
+          aria-controls="site-menu"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          aria-label="Open menu"
+        >
+          <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+
+      <div id="site-menu" popover class="site-menu">
+        <nav aria-label="Primary (mobile)">
+          <ul class="nav-list nav-list--stacked">
+            <li><a href="#overview" data-close-menu>Overview</a></li>
+            <li><a href="#features" data-close-menu>Features</a></li>
+            <li><a href="#contact" data-close-menu>Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <p class="tagline">Mobile-first CSS, macro Grid, micro Flexbox, fluid units.</p>
+    </header>
+
+    <main id="main" class="main-grid">
+      <section id="overview" class="panel card" aria-labelledby="overview-title">
+        <h2 id="overview-title">Overview</h2>
+        <p>
+          This page is a minimal template that implements common responsive requirements:
+          viewport meta, mobile-first stylesheets, CSS Grid for page structure, Flexbox
+          for components, relative units, and a popover navigation pattern for small screens.
+        </p>
+      </section>
+
+      <section id="features" class="panel card" aria-labelledby="features-title">
+        <h2 id="features-title">Features</h2>
+        <ul class="feature-list">
+          <li>Touch-friendly controls (minimum target size)</li>
+          <li>User zoom not disabled in the viewport meta tag</li>
+          <li>Breakpoint added with <code>min-width</code> (mobile-first)</li>
+        </ul>
+      </section>
+
+      <aside class="panel card card--aside" aria-labelledby="aside-title">
+        <h2 id="aside-title">Aside</h2>
+        <p>Use this column for tips, related links, or secondary content.</p>
+      </aside>
+
+      <section id="contact" class="panel card card--wide" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <form class="contact-form" action="#" method="get">
+          <label class="field">
+            <span>Name</span>
+            <input type="text" name="name" autocomplete="name" placeholder="Ada Lovelace">
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" placeholder="you@example.com">
+          </label>
+          <button type="button" class="btn">Send (demo)</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer panel">
+      <p>Project 2 checklist demo </p>
+    </footer>
+  </div>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
+
